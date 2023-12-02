@@ -1,0 +1,805 @@
+/* 공통 */
+.header{
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  vertical-align: bottom;
+  font-weight: bold;
+  color: #4285F4;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.header_img{
+  width: 150px;
+}
+
+#title{
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body{
+  margin:0;
+}
+
+.submit{
+  float: right;
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #4285F4;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.back_div{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.moveBack{
+  background: url(chevron_left_.png) no-repeat;
+  background-size: 31px 46px;
+  width: 31px;
+  height: 46px;
+  border: none;
+  margin-bottom: 7px;
+}
+
+@keyframes fadeInUp{
+  0%{
+    opacity: 0;
+    transform: translate3d(0,100%,0);
+  }
+  to{
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+/* main */
+.container{
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.information{
+  display: inline;
+  width: 1920px;
+  height: 500px;
+  font-size: 16pt;
+  font-weight: bold;
+  color: white;
+  position: relative;
+}
+
+#gameInfo{
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 24px;
+  
+}
+
+#game_status{
+  width: 100px;
+  height: 32px;
+  background-color: #F5F5F5;
+  color: #272727;
+  border-radius: 10px;
+}
+#status{
+  width: 100px;
+  margin-left: 6px;
+}
+
+#vanner_img{
+  width: 100vw;
+}
+
+#vanner_game{
+  text-align: center;
+  width: 1000px;
+  margin-top:13%;
+  margin-bottom: 13%;
+}
+
+#vanner_home{
+  font-size: 24pt;
+}
+#vanner_away{
+  float:right;
+  font-size: 24pt;
+}
+
+.sub_container{
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#thatwordsBtn, #collectionsBtn, #guestbookBtn, #aboutBtn{
+  display: inline;
+  width: 220px;
+  height: 300px;
+  border-radius: 12px;
+  float: left;
+  margin: 10px;
+  vertical-align: top;
+  font-size:16pt;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+#thatwordsBtn{
+  color: white;
+  background-color: #4285F4;
+}
+
+.btnText{
+  width: 200px;
+  text-align: left;
+  margin: 10px;
+  transform: translateY(-420%);
+}
+
+#aboutBtn div{
+  transform: translateY(-490%);
+}
+
+/* banner */
+.rv_left, .wrap, .rv_right{
+  width: 33%;
+  float: left;
+}
+
+.rv_left p{
+  text-align: right;
+}
+
+.rv_left p, .rv_right p{
+  font-size: 20pt;
+  font-weight: bolder;
+}
+
+.rollingvanner{
+  position: relative;
+  height: 35px;
+  font-size: .875rem;
+
+}
+
+.rollingvanner .wrap{
+  position: relative;
+  width: 33%;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.rollingvanner li{
+  list-style: none;
+  position: absolute;
+  top: -70px;
+  font-size: 20pt;
+}
+
+.rollingvanner li.prev{
+  top: 70px;
+  transition: top 0.5s ease;
+}
+.rollingvanner li.current{
+  font-weight: bold;
+  top: 0;
+  transition: top 0.5s ease;
+}
+
+.rollingvanner li.next{
+  top: -70px;
+}
+
+
+#replay{
+  width: 150px;
+  height: 50px;
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+
+/* word */
+#game_container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#left, #right{
+  width: 470px;
+  float: left;
+}
+
+#right{
+  margin-left: 60px;
+}
+#game_info{
+  height: 200px;
+}
+
+.Psetting{
+  font-size: 18pt;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+#game_score{
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+#home_name, #away_name{
+  font-size: 24pt;
+  font-weight: bold;
+  margin: 5px;
+}
+
+#away_name{
+  float: right;
+}
+
+#game_block{
+  height: 600px;
+  background-color: #F5F5F5;
+  overflow: auto;
+}
+
+.game_home, #home_like{
+  font-size: 20px;
+  font-weight: bold;
+  border: 4px solid #00BBD1;
+  background-color: #80DDE8;
+}
+.game_home:hover{
+  color: white;
+  background-color: #00BBD1;
+}
+.game_home, .game_away{
+  position: relative;
+  animation: fadeInUp 1s;
+}
+
+.game_away, #away_like{
+  font-size: 20px;
+  font-weight: bold;
+  border: 4px solid #502588;
+  background-color: #A892C4;
+}
+.game_away:hover{
+  color: white;
+  background-color: #502588;
+}
+
+.game_awayp{
+  text-align: right;
+}
+
+.game_button{
+  height: 70px;
+  width: 220px;
+  margin: 2px 20px;
+  border-radius: 10px;
+}
+
+#game_like{
+  height: 200px;
+}
+
+#home_like, #away_like, #home_click_like{
+  width: 200px;
+  height: 180px;
+  border-radius: 10px;
+  margin: 10px;
+}
+#away_like{
+  float: right;
+}
+
+#home_click_like, #away_click_like{
+  display: none;
+}
+
+.like_text, #defaultWord p{
+  text-align: center;
+}
+
+#wordlist, #defaultWord{
+  height: 592px;
+  width: 462px;
+  border: 4px solid #4285F4;
+  border-radius: 10px;
+  margin-top: 15px;
+  
+}
+
+#defaultWord p{
+  margin-top:230px;
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+#wordlist{
+  display: none;
+}
+
+#word_img{
+  height: 350px;
+  width: 350px;
+}
+
+#description{
+  width: 350px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  margin: 0 auto;
+}
+#des_text{
+  width: 330px;
+  height: 120px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.Psetting, .Pimg, #game_score{
+  text-align: center;
+}
+
+.moveBtn{
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 100%;
+  background: url(leftBtn2.png) no-repeat;
+  background-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.rightBtn{
+  background: url(rigthBtn2.png) no-repeat;
+  background-size: 25px;
+}
+.moveBtn:disabled{
+  background: url(leftBtn_disable.png) no-repeat;
+  background-size: 25px;
+}
+.rightBtn:disabled{
+  background: url(rightBtn_disable.png) no-repeat;
+  background-size: 25px;
+}
+
+.wordSetting{
+  width: 350px;
+  margin:15px auto;
+  font-weight: bold;
+  font-size: 16pt;
+}
+.wordSetting .leftBtn{
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+.wordSetting .rightBtn{
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+
+/* collections */
+#collections_Title, #collections_Club{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#collections_Club{
+  margin-top: -47px;
+  margin-bottom: 15px;
+}
+
+.collection{
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 100%;
+}
+
+.collection_div{
+  width: 750px;
+  height: 750px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+}
+
+.collection_div_div{
+  width: 740px;
+  margin: 10px auto;
+}
+
+.C_btn{
+  position: relative;
+  animation: bounce 2s infinite alternate;
+}
+.C_btn:hover{
+  animation-play-state: paused;
+}
+
+@keyframes bounce{
+  from{
+      top:0;
+  }
+  to{
+      top:500px;
+  }
+}
+
+#C_total, #C_HG, #C_HD, #C_DG, #C_JG, #C_GS, #C_IBK, #C_AI{
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  margin: 5px;
+  font-size: 12pt;
+  border: none;
+  font-weight: bold;
+}
+
+.C_div{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#C_total:hover{
+  background-color: #4285F4;
+  background-image: none;
+}
+#C_total{
+  background: url(rhd.png) no-repeat;
+  animation-duration: 3s;
+  background-size: 110px;
+}
+#C_HG:hover{
+  background-color: #EB0084;
+  background-image: none;
+}
+#C_HG{
+  background: url(rhd2.png) no-repeat;
+  background-size: 110px;
+}
+#C_HD:hover{
+  background-color: #F6C000;
+  background-image: none;
+}
+#C_HD{
+  background: url(rhd5.png) no-repeat;
+  background-size: 110px;
+  animation-duration: 2.3s;
+}
+#C_DG:hover{
+  color: white;
+  background-color: #502588;
+  background-image: none;
+}
+#C_DG{
+  color: black;
+  background: url(rhd6.png) no-repeat;
+  background-size: 110px;
+}
+#C_JG:hover{
+  color: white;
+  background-color: #C20018;
+  background-image: none;
+}
+#C_JG{
+  color: black;
+  background: url(rhd3.png) no-repeat;
+  background-size: 110px;
+  animation-duration: 1.7s;
+}
+#C_GS:hover{
+  background-color: #00BBD1;
+  background-image: none;
+}
+#C_GS{
+  background: url(rhd1.png) no-repeat;
+  background-size: 110px;
+  animation-duration: 2.1s;
+}
+#C_IBK:hover{
+  background-color: #00ADFF;
+  background-image: none;
+}
+#C_IBK{
+  background: url(rhd4.png) no-repeat;
+  background-size: 110px;
+  animation-duration: 1.6s;
+}
+#C_AI:hover{
+  color: white;
+  background-color: #E00000;
+  background-image: none;
+}
+#C_AI{
+  color: black;
+  background: url(rhd7.png) no-repeat;
+  background-size: 110px;
+}
+
+
+
+.ballBtn{
+  background: url(rhd9.png) no-repeat;
+  background-size: 90px;
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+  margin: 13px;
+  border: none;
+}
+
+.GSball{
+  background: url(rhd1_1.png) no-repeat;
+  background-size: 90px;
+}
+.HGball{
+  background: url(rhd2_2.png) no-repeat;
+  background-size: 90px;
+}
+.DGball{
+  background: url(rhd6_2.png) no-repeat;
+  background-size: 90px;
+}
+.HDball{
+  background: url(rhd5_2.png) no-repeat;
+  background-size: 90px;
+}
+.JGball{
+  background: url(rhd3_2.png) no-repeat;
+  background-size: 90px;
+}
+.IBKball{
+  background: url(rhd4_2.png) no-repeat;
+  background-size: 90px;
+}
+.AIball{
+  background: url(rhd7_2.png) no-repeat;
+  background-size: 90px;
+}
+
+
+#ticket{
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+}
+.ticketHG{
+  background-color: #F580C2;
+}
+
+#home, #away{
+  width: 180px;
+  height: 270px;
+  margin: 10px;
+  margin-top: 25px;
+  float: left;
+  text-align: center;
+}
+
+.ball{
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+#ticket_game{
+  width: 270px;
+  height: 270px;
+  margin: 10px;
+  margin-top: 25px;
+  float: left;
+  text-align: center;
+}
+
+#ticketTable{
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+th, td{
+  border-bottom: 1px solid black;
+  padding: 10px;
+  width: 20px;
+}
+
+#review_container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#review{
+  width: 660px;
+  height: 100px;
+  border: #4285F4 solid 4px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+#review_input{
+  width: 660px;
+  height: 40px;
+}
+
+#review_view{
+  width: 700px;
+  height: 300px;
+  overflow: auto;
+  margin: 0 auto;
+  background-color: #4285F4;
+  border-radius: 10px;
+}
+
+#reviews{
+  width: 660px;
+  height: 200px;
+  background-color: white;
+  margin: 18px auto;
+  overflow: scroll;
+  border-radius: 10px;
+}
+
+#reviews_text{
+  width: 600px;
+  height: 130px;
+  overflow: scroll;
+  border: 1px solid white;
+  margin-left: 20px;
+}
+
+#delete{
+  float: right;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 100%;
+  background-color: #4285F4;
+  margin: 10px;
+  color: white;
+}
+
+/* guestbook */
+#guestbook_title{
+  width: 100%;
+  height: 150px;
+  background-color: #4285F4;
+}
+
+#gb_title, #gb_des{
+  font-weight: bold;
+  text-align: center;
+}
+
+#gb_title{
+  font-size: 48px;
+  color: white;
+}
+#gb_des{
+  font-size: 20px;
+}
+
+#gb_add{
+  width: 1000px;
+  height: 150px;
+  background-color: #4285F4;
+  border-radius: 12px;
+  margin: 20px auto;
+}
+
+#gb_add .submit{
+  background-color: white;
+  color: black;
+  margin-right: 18px;
+}
+
+#gb_div{
+  width: 1000px;
+  margin: 5px 18px;
+}
+
+#gb_content{
+  width: 960px;
+  height: 80px;
+  border-radius: 10px;
+  border: none;
+}
+
+#iwantmar{
+  height: 2px;
+}
+
+#gbs{
+  width: 1000px;
+  height: 480px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+#gbs_back{
+  width: 260px;
+  height: 415px;
+  margin: 22px 36px;
+  float: left;
+}
+
+#gbs_img{
+  position: relative;
+  width: 90px;
+  height: 90px;
+  transform: translate(90%,0);
+  z-index: 2;
+}
+
+#gbs_div{
+  position: relative;
+  width: 260px;
+  height: 370px;
+  background-color: #F5F5F5;
+  transform: translate(0,-17%);
+  z-index: 1;
+}
+
+#gbs_text{
+  width: 220px;
+  height: 300px;
+  overflow: scroll;
+  margin: 15px auto;
+  padding: 47px 0 0 0;
+}
+
+/* About */
+#about_div{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#aboutproject{
+  height: 150px;
+  background-color: #4285F4;
+  color: white;
+  padding: 10px;
+}
+
+#about_contact{
+  width: 1000px;
+  margin: 0 auto;
+}

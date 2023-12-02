@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OVERNET</title>
+  <link rel="icon" href="favicon2.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <a href="main.html"><img src="logo.png" alt="" class="header_img"></a>
+    <a href="thatwords.html" >경기 다시보기</a>
+    <a href="collections.html" class="header_text" >수집</a>
+    <!-- <a href="guestbook.html" class="header_text" >방명록</a> -->
+    <a href="aboutme.html" class="header_text" >About</a>    
+  </div>
+<div>
+
+</div>
+<div id="game_container">
+  <div id="left">
+    <div id="game_info">
+      <p>2라운드 2023.11.22</p>
+      <p>
+        <span id="home_name">GS칼텍스</span>
+        <span id="away_name">한국도로공사</span>
+      </p>
+      <p class="Psetting">
+        <button disabled class="moveBtn leftBtn"></button>
+        <span>1세트</span>
+        <button onclick="location.href='thatwords2set.html'"  class="moveBtn rightBtn"></button>
+      </p>
+      <p id="game_score">
+        <span>25</span>
+        <span>:</span>
+        <span>19</span>
+      </p>
+    </div>
+    <div id="game_block">
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">서브</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">오픈</button></p>      
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">서브아웃</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">속공</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">서브아웃</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">속공</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">이동</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">기타범실</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">기타범실</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">서브아웃</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">서브아웃</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">서브아웃</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">라인아웃</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">터치넷</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">라인아웃</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">서브아웃</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">백어택</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">블로킹</button></p>
+      <p class="game_awayp"><button class="game_button game_away" onclick="clickword(this)">퀵오픈</button></p>
+      <p class="game_homep"><button class="game_button game_home" onclick="clickword(this)">퀵오픈</button></p>
+
+    </div>
+  </div>
+  <div id="right">
+    <div id="game_like">
+      <button id="home_like">
+        <p class="like_text">GS칼텍스<br>응원하기</p>
+      </button>
+      <button id="home_click_like"></button>
+      <button id="away_like">
+        <p class="like_text">한국도로공사<br>응원하기</p>
+      </button>
+      <button id="away_click_like"></button>
+    </div>
+    <div id="wordlist">
+      <p class="Psetting wordSetting">
+        <span id="wordname">서브라인침범</span>
+        <button class="moveBtn rightBtn" onclick="closeword()"></button>
+      </p>
+      <p class="Pimg">
+        <img src="서브라인침범.png" alt="" id="word_img">
+      </p>
+      
+      <div id="description">
+        <div id="des_text">
+          서브를 넣을 때 서브라인을 밟으면 상대방이 점수를 획득한다.
+        </div>
+      </div>
+    </div>
+    <div id="defaultWord">
+        <p>
+          모르는 단어를<br>클릭해보세요!
+        </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<script>
+  
+var wordlist = document.getElementById('wordlist');
+var defaultlist = document.getElementById('defaultWord');
+
+  function clickword(t){
+    var text = t.innerText;
+    
+    defaultlist.style.display='none';
+    wordlist.style.display='block';
+
+    var wordname = document.getElementById('wordname');
+    wordname.innerText=text;
+
+    var wordimg = document.getElementById('word_img');
+    wordimg.src=text+'.png';
+
+
+    console.log(text);
+  }
+
+  function closeword(){
+    defaultlist.style.display='block';
+    wordlist.style.display='none';
+  }
+</script>

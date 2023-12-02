@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>OVERNET</title>
+  <link rel="icon" href="favicon2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <a href="main.html"><img src="logo.png" alt="" class="header_img"></a>
+    <a href="thatwords.html" >경기 다시보기</a>
+    <a href="collections.html">수집</a>
+    <!-- <a href="guestbook.html">방명록</a> -->
+    <a href="aboutme.html">About</a>
+</div>
+  <div class="container">
+    <div class="information">
+      <div id="vanner">
+        <img src="배너3_지에스도공2.png" alt="" id="vanner_img">
+      </div>
+      <!-- <div id="gameInfo">
+        <p>
+          <div id="game_status"><div id="circle"></div><div id="status">경기완료</div></div>
+          <span id="vanner_away">한국도로공사</span>
+        </p>
+        <p id="vanner_game">2라운드 <br>2023.11.22 <br>3 : 2</p>
+        <p>
+          <span id="vanner_home">GS칼텍스</span>
+        </p>
+        
+      </div> -->
+    </div>
+    <div class="sub_container">
+        <!-- <button type="button" name="button" onclick="location.href='thatwords.html'" id="thatwordsBtn">
+          <div class="btnText">방금 그 [ ]는?</div>
+        </button> -->
+        <div class="rollingvanner">
+          <div class="rv_left"><p>방금 그 [</p></div>
+          <div class="wrap">
+            <ul>
+              <li>서브</li>
+              <li>오픈</li>
+              <li>이동</li>
+              <li>시간차</li>
+              <li>블로킹</li>
+              <li>서브아웃</li>
+              <li class="prev">라인아웃</li>
+              <li class="current">백어택</li>
+              <li class="next">네트걸림</li>
+              <li>안테나터치</li>
+              <li>후위공격자반칙</li>
+              <li>포히트</li>
+              <li>더블컨택</li>
+              <li>서브라인침범</li>
+              <li>넷터치</li>
+            </ul>
+          </div>
+          <div class="rv_right">
+            <p>  ] 는?</p>
+            <button id="replay" onclick="location.href='thatwords.html'">경기 다시보기 &nbsp;&nbsp;&nbsp; &#10095;</button>
+          </div>
+        </div>
+        <!-- <button type="button" name="button" onclick="location.href='collections.html'" id="collectionsBtn">
+          <div class="btnText">수집</div>
+        </button>
+        <button type="button" name="button" onclick="location.href='guestbook.html'" id="guestbookBtn">
+          <div class="btnText">방명록</div>
+        </button>
+        <button type="button" name="button" onclick="location.href='aboutme.html'" id="aboutBtn">
+          <div class="btnText">ABOUT</div>
+        </button> -->
+    </div>
+  </div>
+</body>
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', ()=>{
+    var interval = window.setInterval(rollingCallback, 3000);
+})
+function rollingCallback(){
+    //.prev 클래스 삭제
+    document.querySelector('.rollingvanner .prev').classList.remove('prev');
+
+    //.current -> .prev
+    let current = document.querySelector('.rollingvanner .current');
+    current.classList.remove('current');
+    current.classList.add('prev');
+
+    //.next -> .current
+    let next = document.querySelector('.rollingvanner .next');
+    //다음 목록 요소가 널인지 체크
+    if(next.nextElementSibling == null){
+        document.querySelector('.rollingvanner ul li:first-child').classList.add('next');
+    }else{
+    	//목록 처음 요소를 다음 요소로 선택
+        next.nextElementSibling.classList.add('next');
+    }
+    next.classList.remove('next');
+    next.classList.add('current');
+}
+</script>
