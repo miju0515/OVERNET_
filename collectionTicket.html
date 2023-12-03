@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <a href="main.html"><img src="logo.png" alt="" class="header_img"></a>
-        <a href="thatwords.html" >경기 다시보기</a>
-        <a href="collections.html">수집</a>
-        <!-- <a href="guestbook.html">방명록</a> -->
-        <a href="aboutme.html">About</a>
-      </div>
+  <div class="header">
+      <a href="index.html"><img src="logo.png" alt="" class="header_img"></a>
+      <a href="thatwords.html" >경기 다시보기</a>
+      <a href="collections.html" class="header_text" >수집</a>
+      <!-- <a href="guestbook.html" class="header_text" >방명록</a> -->
+      <a href="aboutme.html" class="header_text" >About</a>
+    </div>
     <div>
         <div class="back_div">
             <button class="moveBack" onclick="location.href='collection.html'"></button>
@@ -65,18 +65,18 @@
                         <input type="text" id="review_input" placeholder="해당 경기에 대한 후기를 작성해 주세요">
                     </p>
                     <p>
-                        <button type="submit" class="submit">추가하기</button>
+                        <button type="submit" class="submit" disabled>추가하기</button>
                     </p>
                 </form>
             </div>
             <div id="review_view">
                 <div id="reviews">
                     <button id="delete">X</button>
-                    <p id="reviews_text">이것은후기이다</p>
+                    <p id="reviews_text">이곳에 후기가 표시됩니다.</p>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </body>
 </html>

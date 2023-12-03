@@ -13,12 +13,12 @@
 </head>
 <body>
   <div class="header">
-    <a href="main.html"><img src="logo.png" alt="" class="header_img"></a>
-    <a href="thatwords.html" >경기 다시보기</a>
-    <a href="collections.html" class="header_text" >수집</a>
-    <!-- <a href="guestbook.html" class="header_text" >방명록</a> -->
-    <a href="aboutme.html" class="header_text" >About</a>    
-  </div>
+      <a href="index.html"><img src="logo.png" alt="" class="header_img"></a>
+      <a href="thatwords.html" >경기 다시보기</a>
+      <a href="collections.html" class="header_text" >수집</a>
+      <!-- <a href="guestbook.html" class="header_text" >방명록</a> -->
+      <a href="aboutme.html" class="header_text" >About</a>
+    </div>
 <div>
 
 </div>
@@ -94,24 +94,24 @@
   </div>
   <div id="right">
     <div id="game_like">
-      <button id="home_like">
+      <button id="home_like" onclick="clickHomeLike()">
         <p class="like_text">GS칼텍스<br>응원하기</p>
       </button>
-      <button id="home_click_like"></button>
-      <button id="away_like">
+      <div id="heartL" class="heart"></div>
+      <button id="away_like" onclick="clickAwayLike()">
         <p class="like_text">한국도로공사<br>응원하기</p>
       </button>
-      <button id="away_click_like"></button>
+      <button id="heartR" class="heart"></button>
     </div>
     <div id="wordlist">
       <p class="Psetting wordSetting">
         <span id="wordname">서브라인침범</span>
-        <button class="moveBtn rightBtn" onclick="closeword()"></button>
+        <button class="moveBtn rightBtn closeBtn" onclick="closeword()"></button>
       </p>
       <p class="Pimg">
         <img src="서브라인침범.png" alt="" id="word_img">
       </p>
-      
+
       <div id="description">
         <div id="des_text">
           서브를 넣을 때 서브라인을 밟으면 상대방이 점수를 획득한다.
@@ -130,28 +130,77 @@
 </html>
 
 <script>
-  
+
   var wordlist = document.getElementById('wordlist');
   var defaultlist = document.getElementById('defaultWord');
-  
+
     function clickword(t){
       var text = t.innerText;
-      
+
       defaultlist.style.display='none';
       wordlist.style.display='block';
-  
+
       var wordname = document.getElementById('wordname');
       wordname.innerText=text;
-  
+
       var wordimg = document.getElementById('word_img');
       wordimg.src=text+'.png';
-  
-  
+
+      var worddes = document.getElementById('des_text');
+      if(text==='오픈'){
+        worddes.innerText='넓은 공간에서 높게 토스한 공을 때리는 공격';
+      }else if(text==='퀵오픈'){
+        worddes.innerText='안테나 높이보다 낮은 빠른 공을 때리는 공격';
+      }else if(text==='백어택'){
+        worddes.innerText='선수가 어택 라인 뒤에서 점프하는 공격';
+      }else if(text==='속공'){
+        worddes.innerText='세터와 거리가 가까운 곳에서 빠르게 때리는 공격';
+      }else if(text==='이동'){
+        worddes.innerText='공격수가 세터의 뒤로 돌아 이동을 하는 공격';
+      }else if(text==='시간차'){
+        worddes.innerText='상대 블로킹을 속이기 위해 시간차를 두고 때리는 공격';
+      }else if(text==='서브'){
+        worddes.innerText='서브로 득점을 만들어 낸 경우';
+      }else if(text==='서브아웃'){
+        worddes.innerText='공이 가장 눌렸을 때 조금이라도 네트 바깥쪽 선에 닿지 않으면 아웃으로 판정된다';
+      }else if(text==='넷터치'){
+        worddes.innerText='신체 일부 부위가 네트에 닿았을 경우 상대팀의 점수가 된다';
+      }else if(text==='후위공격자반칙'){
+        worddes.innerText='후위 로테이션인 선수가 어택 라인을 밟고 공격을 했을 경우 범실이 된다. ';
+      }else if(text==='기타범실'){
+        worddes.innerText='공이 땅에 떨어지면 범실이 된다';
+      }else if(text==='네트걸림'){
+        worddes.innerText='공이 네트를 넘어가지 못하고 걸렸을 경우';
+      }else if(text==='라인아웃'){
+        worddes.innerText='공이 가장 눌렸을 때 조금이라도 네트 바깥쪽 선에 닿지 않으면 아웃으로 판정된다';
+      }else if(text==='블로킹'){
+        worddes.innerText='상대 공격을 네트 앞에서 막기 위한 수비 행위';
+      }else if(text==='세트기타범실'){
+        worddes.innerText='한 선수가 한 번에 2번 이상 공을 터치했을 경우. 단, 연속 행위로 보았을 경우는 더블 컨택으로 보지 않는다.';
+      }
+
+
       console.log(text);
     }
-  
+
     function closeword(){
       defaultlist.style.display='block';
       wordlist.style.display='none';
+    }
+
+    var homelike = document.getElementById('home_like');
+    var homelikeheart = document.getElementById('heartL');
+
+    var awaylike = document.getElementById('away_like');
+    var awaylikeheart = document.getElementById('heartR');
+
+    function clickHomeLike(){
+      homelikeheart.style.display='block';
+      homelike.style.display='none';
+    }
+
+    function clickAwayLike(){
+      awaylikeheart.style.display='block';
+      awaylike.style.display='none';
     }
   </script>
