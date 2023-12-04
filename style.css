@@ -72,6 +72,10 @@ body{
   }
 }
 
+button{
+  cursor: pointer;
+}
+
 /* main */
 .container{
   width: 100vw;
